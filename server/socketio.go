@@ -481,7 +481,6 @@ type resultGetBlockHeader struct {
 
 func (s *SocketIoServer) getBlockHeader(height uint32, hash string) (res resultGetBlockHeader, err error) {
 	if hash == "" {
-		// trezor is interested only in hash
 		hash, err = s.db.GetBlockHash(height)
 		if err != nil {
 			return

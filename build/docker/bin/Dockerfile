@@ -23,8 +23,8 @@ RUN go get github.com/gobuffalo/packr/...
 RUN \
     cleanup() { rm -rf $GOPATH/src/github.com/grupokindynos ; } && \
     trap cleanup EXIT && \
-    mkdir -p $GOPATH/src/github.com/trezor && \
-    cd $GOPATH/src/github.com/trezor && \
+    mkdir -p $GOPATH/src/github.com/grupokindynos && \
+    cd $GOPATH/src/github.com/grupokindynos && \
     git clone https://github.com/grupokindynos/coins-explorer.git && \
     cd coins-explorer && \
     env GO111MODULE=on go mod vendor && \
