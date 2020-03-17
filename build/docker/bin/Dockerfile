@@ -2,13 +2,6 @@
 
 FROM kindynos/rocksdb:latest
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y build-essential git wget pkg-config lxc-dev libzmq3-dev \
-                       libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev \
-                       liblz4-dev graphviz && \
-    apt-get clean
-
 ENV GOLANG_VERSION=go1.13.8.linux-amd64
 ENV GOPATH=/go
 ENV PATH=$PATH:$GOPATH/bin
@@ -28,12 +21,12 @@ RUN go get github.com/gobuffalo/packr/...
 
 # download pre-loaded depencencies
 RUN \
-    cleanup() { rm -rf $GOPATH/src/github.com/trezor ; } && \
+    cleanup() { rm -rf $GOPATH/src/github.com/grupokindynos ; } && \
     trap cleanup EXIT && \
     mkdir -p $GOPATH/src/github.com/trezor && \
     cd $GOPATH/src/github.com/trezor && \
     git clone https://github.com/grupokindynos/coins-explorer.git && \
-    cd blockbook && \
+    cd coins-explorer && \
     env GO111MODULE=on go mod vendor && \
     cp -r vendor /build/vendor
 
