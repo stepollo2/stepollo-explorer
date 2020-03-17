@@ -6,10 +6,10 @@
     "alias": "litecoin"
   },
   "ports": {
-    "backend_rpc": 8034,
-    "backend_message_queue": 38334,
-    "blockbook_internal": 9034,
-    "blockbook_public": 9134
+    "backend_rpc": 8030,
+    "backend_message_queue": 38330,
+    "blockbook_internal": 9030,
+    "blockbook_public": 9130
   },
   "ipc": {
     "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",

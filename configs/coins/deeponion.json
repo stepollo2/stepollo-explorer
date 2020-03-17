@@ -6,10 +6,10 @@
     "alias": "deeponion"
   },
   "ports": {
-    "backend_rpc": 8091,
-    "backend_message_queue": 38391,
-    "blockbook_internal": 9091,
-    "blockbook_public": 9191
+    "backend_rpc": 8030,
+    "backend_message_queue": 38330,
+    "blockbook_internal": 9030,
+    "blockbook_public": 9130
   },
   "ipc": {
     "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",

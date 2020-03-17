@@ -6,12 +6,12 @@
     "alias": "ethereum"
   },
   "ports": {
-    "backend_rpc": 8036,
-    "backend_message_queue": 0,
-    "backend_p2p": 38336,
-    "backend_http": 8136,
-    "blockbook_internal": 9036,
-    "blockbook_public": 9136
+    "backend_rpc": 8030,
+    "backend_message_queue": 38330,
+    "blockbook_internal": 9030,
+    "blockbook_public": 9130,
+    "backend_p2p": 38330,
+    "backend_http": 8130
   },
   "ipc": {
     "rpc_url_template": "ws://127.0.0.1:{{.Ports.BackendRPC}}",
