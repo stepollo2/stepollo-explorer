@@ -1,12 +1,30 @@
+@font-face {
+    font-family: "all-round-gothic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/all-round-gothic.ttf");
+}
+
+@font-face {
+    font-family: "gothic";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../assets/fonts/gothic.woff2");
+}
+
 html, body {
     height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "all-round-gothic", serif;
 }
 
 body {
     width: 100%;
     min-height: 100%;
     background-color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-family: "gothic", serif;
     font-size: 11px;
 }
 
