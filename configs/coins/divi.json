@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-divi",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay-1",
     "system_user": "divi",
     "version": "1.0.4",
     "binary_url": "https://github.com/DiviProject/Divi/releases/download/v1.0.4-core/divi_ubuntu.zip",

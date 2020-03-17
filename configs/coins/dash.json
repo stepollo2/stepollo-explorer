@@ -20,8 +20,7 @@
   },
   "backend": {
     "package_name": "backend-dash",
-    "package_revision": "satoshilabs-1",
-    "system_user": "dash",
+v    "system_user": "dash",
     "version": "0.15.0.0",
     "binary_url": "https://github.com/dashpay/dash/releases/download/v0.15.0.0/dashcore-0.15.0.0-x86_64-linux-gnu.tar.gz",
     "verification_type": "gpg-sha256",

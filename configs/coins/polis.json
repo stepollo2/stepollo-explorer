@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-polis",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay-1",
     "system_user": "polis",
     "version": "1.6.2",
     "binary_url": "https://github.com/polispay/polis/releases/download/v1.6.2/poliscore-1.6.2-x86_64-linux-gnu.tar.gz",

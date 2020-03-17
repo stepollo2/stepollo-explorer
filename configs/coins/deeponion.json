@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-deeponion",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay-1",
     "system_user": "deeponion",
     "version": "2.0.5",
     "binary_url": "https://github.com/deeponion/deeponion/releases/download/v2.0.5/deeponion-2.0.5-x86_64-linux-gnu.tar.gz",

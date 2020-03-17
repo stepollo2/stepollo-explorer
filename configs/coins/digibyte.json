@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-digibyte",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay-1",
     "system_user": "digibyte",
     "version": "7.17.2",
     "binary_url": "https://github.com/digibyte/digibyte/releases/download/v7.17.2/digibyte-7.17.2-x86_64-linux-gnu.tar.gz",

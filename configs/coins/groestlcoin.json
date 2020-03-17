@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-groestlcoin",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay-1",
     "system_user": "groestlcoin",
     "version": "2.18.2",
     "binary_url": "https://github.com/Groestlcoin/groestlcoin/releases/download/v2.18.2/groestlcoin-2.18.2-x86_64-linux-gnu.tar.gz",
