@@ -103,7 +103,7 @@ func NewPublicServer(binding string, certFiles string, db *db.RocksDB, chain bch
 	s.templates = s.parseTemplates()
 
 	// map only basic functions, the rest is enabled by method MapFullPublicInterface
-	serveMux.Handle(path+"favicon.ico", http.FileServer(http.Dir("./static/")))
+	serveMux.Handle(path+"favicon.ico", http.FileServer(http.Dir("./static/assets/img/")))
 	serveMux.Handle(path+"static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
 	// default handler
 	serveMux.HandleFunc(path, s.htmlTemplateHandler(s.explorerIndex))
@@ -127,9 +127,6 @@ func (s *PublicServer) Run() error {
 func (s *PublicServer) ConnectFullPublicInterface() {
 	serveMux := s.https.Handler.(*http.ServeMux)
 	_, path := splitBinding(s.binding)
-	// support for test pages
-	serveMux.Handle(path+"test-socketio.html", http.FileServer(http.Dir("./static/")))
-	serveMux.Handle(path+"test-websocket.html", http.FileServer(http.Dir("./static/")))
 	if s.internalExplorer {
 		// internal explorer handlers
 		serveMux.HandleFunc(path+"tx/", s.htmlTemplateHandler(s.explorerTx))

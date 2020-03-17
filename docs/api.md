@@ -21,7 +21,7 @@ POST /api/v1/sendtx (hex tx data in request body)
 ```
 
 ### Socket.io API
-Socket.io interface is provided at `/socket.io/`. The interface also can be explored using Blockbook Socket.io Test Page found at `/test-socketio.html`.
+Socket.io interface is provided at `/socket.io/`. The interface also can be explored using Blockbook Socket.io.
 
 The legacy API is provided as is and will not be further developed.
 
@@ -736,7 +736,7 @@ Example response (fiatcurrency=usd&groupBy=172800):
 
 ### Websocket API
 
-Websocket interface is provided at `/websocket/`. The interface can be explored using Blockbook Websocket Test Page found at `/test-websocket.html`.
+Websocket interface is provided at `/websocket/`.
 
 The websocket interface provides the following requests:
 
