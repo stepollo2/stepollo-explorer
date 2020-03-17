@@ -14,6 +14,7 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/xzc"
 	"github.com/grupokindynos/coins-explorer/common"
 	"io/ioutil"
 	"math/big"
@@ -30,14 +31,15 @@ var BlockChainFactories = make(map[string]blockChainFactory)
 
 func init() {
 	BlockChainFactories["Bitcoin"] = btc.NewBitcoinRPC
-	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
 	BlockChainFactories["Dash"] = dash.NewDashRPC
-	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
-	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
-	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
-	BlockChainFactories["Polis"] = polis.NewPolisRPC
-	BlockChainFactories["Divi"] = divi.NewDiviRPC
 	BlockChainFactories["DeepOnion"] = deeponion.NewDeepOnionRPC
+	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
+	BlockChainFactories["Divi"] = divi.NewDiviRPC
+	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
+	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
+	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
+	BlockChainFactories["Polis"] = polis.NewPolisRPC
+	BlockChainFactories["Zcoin"] = xzc.NewZcoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
