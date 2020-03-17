@@ -109,12 +109,12 @@ h3 {
     margin: 0;
     padding-bottom: 0;
     padding-top: 0;
-    background-image: linear-gradient(45deg, rgba(0,158,150,1) 0%, rgba(45,169,101,1) 100%);
+    background-color: #17A47E;
     border: 0;
 }
 
 .bg-polispay {
-    background-image: linear-gradient(45deg, rgba(0,158,150,1) 0%, rgba(45,169,101,1) 100%);
+    background-color: #17A47E;
     padding-top: 3px;
     padding-bottom: 2px;
     z-index: 2;
@@ -145,7 +145,7 @@ h3 {
 }
 
 #footer {
-    background-image: linear-gradient(45deg, rgba(0,158,150,1) 0%, rgba(45,169,101,1) 100%);
+    background-color: #17A47E;
     color: #fff;
     height: 42px;
     overflow: hidden;
