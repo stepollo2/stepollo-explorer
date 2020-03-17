@@ -144,7 +144,7 @@ func openDB(path string, c *gorocksdb.Cache, openFiles int) (*gorocksdb.DB, []*g
 
 // NewRocksDB opens an internal handle to RocksDB environment.  Close
 // needs to be called to release it.
-func NewRocksDB(path string, cacheSize, maxOpenFiles int, parser bchain.BlockChainParser, metrics *common.Metrics) (d *RocksDB, err error) {
+func NewRocksDB(path string, cacheSize uint64, maxOpenFiles int, parser bchain.BlockChainParser, metrics *common.Metrics) (d *RocksDB, err error) {
 	glog.Infof("rocksdb: opening %s, required data version %v, cache size %v, max open files %v", path, dbVersion, cacheSize, maxOpenFiles)
 
 	cfNames = append([]string{}, cfBaseNames...)
@@ -318,7 +318,8 @@ func atoi(s string) int {
 
 // GetMemoryStats returns memory usage statistics as reported by RocksDB
 func (d *RocksDB) GetMemoryStats() string {
-	var total, indexAndFilter, memtable int
+	var total uint64
+	var indexAndFilter, memtable int
 	type columnStats struct {
 		name           string
 		indexAndFilter string
@@ -333,15 +334,15 @@ func (d *RocksDB) GetMemoryStats() string {
 		memtable += atoi(cs[i].memtable)
 	}
 	m := struct {
-		cacheUsage       int
-		pinnedCacheUsage int
+		cacheUsage       uint64
+		pinnedCacheUsage uint64
 		columns          []columnStats
 	}{
 		cacheUsage:       d.cache.GetUsage(),
 		pinnedCacheUsage: d.cache.GetPinnedUsage(),
 		columns:          cs,
 	}
-	total = m.cacheUsage + indexAndFilter + memtable
+	total = m.cacheUsage + uint64(indexAndFilter + memtable)
 	return fmt.Sprintf("Total %d, indexAndFilter %d, memtable %d, %+v", total, indexAndFilter, memtable, m)
 }
 

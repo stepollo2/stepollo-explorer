@@ -9,6 +9,9 @@ TARGETS=$(subst .json,, $(shell ls configs/coins))
 
 .PHONY: build build-debug test deb
 
+chech-docker:
+
+
 build: .bin-image
 	docker run -t --rm -e PACKAGER=$(PACKAGER) -e UPDATE_VENDOR=$(UPDATE_VENDOR) -v $(CURDIR):/src -v $(CURDIR)/build:/out $(BIN_IMAGE) make build ARGS="$(ARGS)"
 
