@@ -91,18 +91,18 @@ h3 {
     margin: 0;
     padding-bottom: 0;
     padding-top: 0;
-    background-color: #212121;
+    background-image: linear-gradient(#009e96,#2da965);
     border: 0;
 }
 
-.bg-trezor {
-    background-color: #212121!important;
+.bg-polispay {
+    background-image: linear-gradient(#009e96,#2da965);
     padding-top: 3px;
     padding-bottom: 2px;
     z-index: 2;
 }
 
-.bg-trezor .navbar-brand {
+.bg-polispay .navbar-brand {
     color: rgba(255, 255, 255);
     font-weight: bold;
     font-size: 19px;
@@ -113,7 +113,7 @@ h3 {
     .navbar {
         font-size: 14px;
     }
-    .bg-trezor .navbar-brand {
+    .bg-polispay .navbar-brand {
         font-weight: normal;
         font-size: 14px;
     }
@@ -127,7 +127,7 @@ h3 {
 }
 
 #footer {
-    background-color: #212121;
+    background-image: linear-gradient(#009e96,#2da965);
     color: #fff;
     height: 42px;
     overflow: hidden;
