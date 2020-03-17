@@ -3,12 +3,12 @@
 package fiat
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
-	"blockbook/common"
-	"blockbook/db"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"

@@ -3,10 +3,10 @@
 package btg
 
 import (
-	"blockbook/bchain/coins/btc"
 	"bytes"
 	"encoding/hex"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"io/ioutil"
 	"os"
 	"path/filepath"

@@ -3,12 +3,12 @@
 package server
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
-	"blockbook/common"
-	"blockbook/db"
-	"blockbook/tests/dbtestdata"
 	"encoding/json"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
+	"github.com/grupokindynos/coins-explorer/tests/dbtestdata"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"

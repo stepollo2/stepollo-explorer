@@ -3,11 +3,11 @@
 package polis
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
 	"bytes"
 	"encoding/hex"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"github.com/martinboehm/btcutil/chaincfg"
 	"io/ioutil"
 	"math/big"

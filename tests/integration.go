@@ -3,14 +3,14 @@
 package tests
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins"
-	build "blockbook/build/tools"
-	"blockbook/tests/rpc"
-	"blockbook/tests/sync"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins"
+	build "github.com/grupokindynos/coins-explorer/build/tools"
+	"github.com/grupokindynos/coins-explorer/tests/rpc"
+	"github.com/grupokindynos/coins-explorer/tests/sync"
 	"io/ioutil"
 	"net"
 	"os"

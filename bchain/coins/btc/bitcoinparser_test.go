@@ -3,8 +3,8 @@
 package btc
 
 import (
-	"blockbook/bchain"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
 	"math/big"
 	"os"
 	"reflect"

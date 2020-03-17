@@ -3,9 +3,9 @@
 package digibyte
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"math/big"
 	"os"
 	"reflect"

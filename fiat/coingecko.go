@@ -1,9 +1,9 @@
 package fiat
 
 import (
-	"blockbook/db"
 	"encoding/json"
 	"errors"
+	"github.com/grupokindynos/coins-explorer/db"
 	"io/ioutil"
 	"net/http"
 	"strconv"

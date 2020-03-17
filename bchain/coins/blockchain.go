@@ -1,48 +1,20 @@
 package coins
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/bch"
-	"blockbook/bchain/coins/bellcoin"
-	"blockbook/bchain/coins/bitcore"
-	"blockbook/bchain/coins/btc"
-	"blockbook/bchain/coins/btg"
-	"blockbook/bchain/coins/cpuchain"
-	"blockbook/bchain/coins/dash"
-	"blockbook/bchain/coins/dcr"
-	"blockbook/bchain/coins/deeponion"
-	"blockbook/bchain/coins/digibyte"
-	"blockbook/bchain/coins/divi"
-	"blockbook/bchain/coins/dogecoin"
-	"blockbook/bchain/coins/eth"
-	"blockbook/bchain/coins/flo"
-	"blockbook/bchain/coins/fujicoin"
-	"blockbook/bchain/coins/gamecredits"
-	"blockbook/bchain/coins/grs"
-	"blockbook/bchain/coins/koto"
-	"blockbook/bchain/coins/liquid"
-	"blockbook/bchain/coins/litecoin"
-	"blockbook/bchain/coins/monacoin"
-	"blockbook/bchain/coins/monetaryunit"
-	"blockbook/bchain/coins/myriad"
-	"blockbook/bchain/coins/namecoin"
-	"blockbook/bchain/coins/nuls"
-	"blockbook/bchain/coins/omotenashicoin"
-	"blockbook/bchain/coins/pivx"
-	"blockbook/bchain/coins/polis"
-	"blockbook/bchain/coins/qtum"
-	"blockbook/bchain/coins/ravencoin"
-	"blockbook/bchain/coins/ritocoin"
-	"blockbook/bchain/coins/unobtanium"
-	"blockbook/bchain/coins/vertcoin"
-	"blockbook/bchain/coins/viacoin"
-	"blockbook/bchain/coins/vipstarcoin"
-	"blockbook/bchain/coins/xzc"
-	"blockbook/bchain/coins/zec"
-	"blockbook/common"
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/dash"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/deeponion"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/digibyte"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/divi"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
+	"github.com/grupokindynos/coins-explorer/common"
 	"io/ioutil"
 	"math/big"
 	"reflect"
@@ -58,58 +30,14 @@ var BlockChainFactories = make(map[string]blockChainFactory)
 
 func init() {
 	BlockChainFactories["Bitcoin"] = btc.NewBitcoinRPC
-	BlockChainFactories["Testnet"] = btc.NewBitcoinRPC
-	BlockChainFactories["Zcash"] = zec.NewZCashRPC
-	BlockChainFactories["Zcash Testnet"] = zec.NewZCashRPC
 	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
-	BlockChainFactories["Ethereum Classic"] = eth.NewEthereumRPC
-	BlockChainFactories["Ethereum Testnet Ropsten"] = eth.NewEthereumRPC
-	BlockChainFactories["Bcash"] = bch.NewBCashRPC
-	BlockChainFactories["Bcash Testnet"] = bch.NewBCashRPC
-	BlockChainFactories["Bgold"] = btg.NewBGoldRPC
 	BlockChainFactories["Dash"] = dash.NewDashRPC
-	BlockChainFactories["Dash Testnet"] = dash.NewDashRPC
-	BlockChainFactories["Decred"] = dcr.NewDecredRPC
-	BlockChainFactories["Decred Testnet"] = dcr.NewDecredRPC
-	BlockChainFactories["GameCredits"] = gamecredits.NewGameCreditsRPC
-	BlockChainFactories["Koto"] = koto.NewKotoRPC
-	BlockChainFactories["Koto Testnet"] = koto.NewKotoRPC
 	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
-	BlockChainFactories["Litecoin Testnet"] = litecoin.NewLitecoinRPC
-	BlockChainFactories["Dogecoin"] = dogecoin.NewDogecoinRPC
-	BlockChainFactories["Vertcoin"] = vertcoin.NewVertcoinRPC
-	BlockChainFactories["Vertcoin Testnet"] = vertcoin.NewVertcoinRPC
-	BlockChainFactories["Namecoin"] = namecoin.NewNamecoinRPC
-	BlockChainFactories["Monacoin"] = monacoin.NewMonacoinRPC
-	BlockChainFactories["Monacoin Testnet"] = monacoin.NewMonacoinRPC
-	BlockChainFactories["MonetaryUnit"] = monetaryunit.NewMonetaryUnitRPC
 	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
-	BlockChainFactories["Myriad"] = myriad.NewMyriadRPC
-	BlockChainFactories["Liquid"] = liquid.NewLiquidRPC
 	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
-	BlockChainFactories["Groestlcoin Testnet"] = grs.NewGroestlcoinRPC
-	BlockChainFactories["PIVX"] = pivx.NewPivXRPC
-	BlockChainFactories["PIVX Testnet"] = pivx.NewPivXRPC
 	BlockChainFactories["Polis"] = polis.NewPolisRPC
-	BlockChainFactories["Zcoin"] = xzc.NewZcoinRPC
-	BlockChainFactories["Fujicoin"] = fujicoin.NewFujicoinRPC
-	BlockChainFactories["Flo"] = flo.NewFloRPC
-	BlockChainFactories["Bellcoin"] = bellcoin.NewBellcoinRPC
-	BlockChainFactories["Qtum"] = qtum.NewQtumRPC
-	BlockChainFactories["Viacoin"] = viacoin.NewViacoinRPC
-	BlockChainFactories["Qtum Testnet"] = qtum.NewQtumRPC
-	BlockChainFactories["NULS"] = nuls.NewNulsRPC
-	BlockChainFactories["VIPSTARCOIN"] = vipstarcoin.NewVIPSTARCOINRPC
-	BlockChainFactories["ZelCash"] = zec.NewZCashRPC
-	BlockChainFactories["Ravencoin"] = ravencoin.NewRavencoinRPC
-	BlockChainFactories["Ritocoin"] = ritocoin.NewRitocoinRPC
 	BlockChainFactories["Divi"] = divi.NewDiviRPC
-	BlockChainFactories["CPUchain"] = cpuchain.NewCPUchainRPC
-	BlockChainFactories["Unobtanium"] = unobtanium.NewUnobtaniumRPC
 	BlockChainFactories["DeepOnion"] = deeponion.NewDeepOnionRPC
-	BlockChainFactories["Bitcore"] = bitcore.NewBitcoreRPC
-	BlockChainFactories["Omotenashicoin"] = omotenashicoin.NewOmotenashiCoinRPC
-	BlockChainFactories["Omotenashicoin Testnet"] = omotenashicoin.NewOmotenashiCoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

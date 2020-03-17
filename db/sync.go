@@ -1,8 +1,8 @@
 package db
 
 import (
-	"blockbook/bchain"
-	"blockbook/common"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/common"
 	"os"
 	"sync"
 	"sync/atomic"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"blockbook/build/tools"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/build/tools"
 	"os"
 	"path/filepath"
 	"strings"

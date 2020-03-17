@@ -3,12 +3,12 @@
 package db
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
-	"blockbook/common"
-	"blockbook/tests/dbtestdata"
 	"encoding/binary"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/tests/dbtestdata"
 	"io/ioutil"
 	"math/big"
 	"os"

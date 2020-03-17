@@ -1,11 +1,11 @@
 package server
 
 import (
-	"blockbook/api"
-	"blockbook/bchain"
-	"blockbook/common"
-	"blockbook/db"
 	"encoding/json"
+	"github.com/grupokindynos/coins-explorer/api"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
 	"math/big"
 	"net/http"
 	"runtime/debug"

@@ -3,9 +3,9 @@
 package db
 
 import (
-	"blockbook/bchain/coins/eth"
-	"blockbook/tests/dbtestdata"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
+	"github.com/grupokindynos/coins-explorer/tests/dbtestdata"
 	"reflect"
 	"testing"
 

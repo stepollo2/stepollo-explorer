@@ -1,10 +1,10 @@
 package btc
 
 import (
-	"blockbook/bchain"
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
 	"math"
 	"net/http"
 	"strconv"

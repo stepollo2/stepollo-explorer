@@ -1,7 +1,7 @@
 package api
 
 import (
-	"blockbook/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain"
 	"math/big"
 )
 

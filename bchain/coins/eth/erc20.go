@@ -1,10 +1,10 @@
 package eth
 
 import (
-	"blockbook/bchain"
 	"bytes"
 	"context"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
 	"math/big"
 	"strings"
 	"sync"

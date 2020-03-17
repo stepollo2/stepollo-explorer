@@ -1,10 +1,10 @@
 package db
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/eth"
 	"bytes"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
 
 	vlq "github.com/bsm/go-vlq"
 	"github.com/golang/glog"

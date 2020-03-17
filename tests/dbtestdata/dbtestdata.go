@@ -1,8 +1,8 @@
 package dbtestdata
 
 import (
-	"blockbook/bchain"
 	"encoding/hex"
+	"github.com/grupokindynos/coins-explorer/bchain"
 	"math/big"
 
 	"github.com/golang/glog"

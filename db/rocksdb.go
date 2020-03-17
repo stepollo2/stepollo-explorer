@@ -1,13 +1,13 @@
 package db
 
 import (
-	"blockbook/bchain"
-	"blockbook/common"
 	"bytes"
 	"encoding/binary"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/common"
 	"math/big"
 	"os"
 	"path/filepath"

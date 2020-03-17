@@ -3,8 +3,8 @@
 package sync
 
 import (
-	"blockbook/bchain"
-	"blockbook/db"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/db"
 	"math/big"
 	"os"
 	"reflect"

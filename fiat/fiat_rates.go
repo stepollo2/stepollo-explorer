@@ -1,10 +1,10 @@
 package fiat
 
 import (
-	"blockbook/db"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/db"
 	"reflect"
 	"time"
 

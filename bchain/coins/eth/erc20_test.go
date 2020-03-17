@@ -3,9 +3,9 @@
 package eth
 
 import (
-	"blockbook/bchain"
-	"blockbook/tests/dbtestdata"
 	fmt "fmt"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/tests/dbtestdata"
 	"math/big"
 	"strings"
 	"testing"

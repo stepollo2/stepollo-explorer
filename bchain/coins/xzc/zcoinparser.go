@@ -1,11 +1,11 @@
 package xzc
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
 	"bytes"
 	"encoding/binary"
 	"encoding/json"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"io"
 
 	"github.com/martinboehm/btcd/chaincfg/chainhash"

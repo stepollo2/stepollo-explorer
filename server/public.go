@@ -1,13 +1,13 @@
 package server
 
 import (
-	"blockbook/api"
-	"blockbook/bchain"
-	"blockbook/common"
-	"blockbook/db"
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/grupokindynos/coins-explorer/api"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
 	"html/template"
 	"io/ioutil"
 	"math/big"

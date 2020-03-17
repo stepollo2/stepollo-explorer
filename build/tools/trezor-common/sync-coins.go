@@ -2,10 +2,10 @@
 package main
 
 import (
-	build "blockbook/build/tools"
 	"encoding/json"
 	"errors"
 	"fmt"
+	build "github.com/grupokindynos/coins-explorer/build/tools"
 	"io"
 	"io/ioutil"
 	"net/http"

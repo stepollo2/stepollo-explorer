@@ -1,16 +1,16 @@
 package main
 
 import (
-	"blockbook/api"
-	"blockbook/bchain"
-	"blockbook/bchain/coins"
-	"blockbook/common"
-	"blockbook/db"
-	"blockbook/fiat"
-	"blockbook/server"
 	"context"
 	"encoding/json"
 	"flag"
+	"github.com/grupokindynos/coins-explorer/api"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
+	"github.com/grupokindynos/coins-explorer/fiat"
+	"github.com/grupokindynos/coins-explorer/server"
 	"io/ioutil"
 	"log"
 	"math/rand"

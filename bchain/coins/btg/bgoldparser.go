@@ -1,11 +1,11 @@
 package btg
 
 import (
-	"blockbook/bchain"
-	"blockbook/bchain/coins/btc"
-	"blockbook/bchain/coins/utils"
 	"bytes"
 	"encoding/binary"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/utils"
 	"io"
 
 	"github.com/martinboehm/btcd/chaincfg/chainhash"
