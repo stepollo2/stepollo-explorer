@@ -16,32 +16,12 @@
                     <td class="data">{{$bb.Coin}}</td>
                 </tr>
                 <tr>
-                    <td>Host</td>
-                    <td class="data">{{$bb.Host}}</td>
-                </tr>
-                <tr>
-                    <td>Version / Commit / Build</td>
-                    <td class="data">{{$bb.Version}} / <a href="https://github.com/grupokindynos/coins-explorer/commit/{{$bb.GitCommit}}" target="_blank" rel="noopener noreferrer">{{$bb.GitCommit}}</a> / {{$bb.BuildTime}}</td>
-                </tr>
-                <tr>
                     <td>Synchronized</td>
                     <td class="data {{if not $bb.InSync}}text-danger{{else}}text-success{{end}}">{{$bb.InSync}}</td>
                 </tr>
                 <tr>
                     <td>Last Block</td>
                     <td class="data">{{if .InternalExplorer}}<a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>{{else}}{{$bb.BestHeight}}{{end}}</td>
-                </tr>
-                <tr>
-                    <td>Last Block Update</td>
-                    <td class="data">{{formatTime $bb.LastBlockTime}}</td>
-                </tr>
-                <tr>
-                    <td>Mempool in Sync</td>
-                    <td class="data {{if not $bb.InSyncMempool}}text-danger{{else}}text-success{{end}}">{{$bb.InSyncMempool}}</td>
-                </tr>
-                <tr>
-                    <td>Last Mempool Update</td>
-                    <td class="data">{{formatTime $bb.LastMempoolTime}}</td>
                 </tr>
                 <tr>
                     <td>Transactions in Mempool</td>
