@@ -37,7 +37,7 @@ func init() {
 	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
 	BlockChainFactories["Divi"] = divi.NewDiviRPC
 	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
-	BlockChainFactories["Energi"] = ngr.NewEnergiRPC
+	BlockChainFactories["Energi3"] = ngr.NewEnergiRPC
 	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
 	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
 	BlockChainFactories["Polis"] = polis.NewPolisRPC

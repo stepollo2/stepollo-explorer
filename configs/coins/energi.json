@@ -1,9 +1,9 @@
 {
   "coin": {
-    "name": "Energi",
+    "name": "Energi3",
     "shortcut": "NGR",
-    "label": "Energi",
-    "alias": "energi"
+    "label": "Energi3",
+    "alias": "energi3"
   },
   "ports": {
     "backend_rpc": 8030,
