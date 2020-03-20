@@ -13,6 +13,7 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/ngr"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/xzc"
 	"github.com/grupokindynos/coins-explorer/common"
@@ -36,6 +37,7 @@ func init() {
 	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
 	BlockChainFactories["Divi"] = divi.NewDiviRPC
 	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
+	BlockChainFactories["Energi"] = ngr.NewEnergiRPC
 	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
 	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
 	BlockChainFactories["Polis"] = polis.NewPolisRPC

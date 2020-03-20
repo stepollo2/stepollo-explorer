@@ -342,7 +342,7 @@ func (d *RocksDB) GetMemoryStats() string {
 		pinnedCacheUsage: d.cache.GetPinnedUsage(),
 		columns:          cs,
 	}
-	total = m.cacheUsage + uint64(indexAndFilter + memtable)
+	total = m.cacheUsage + uint64(indexAndFilter+memtable)
 	return fmt.Sprintf("Total %d, indexAndFilter %d, memtable %d, %+v", total, indexAndFilter, memtable, m)
 }
 
