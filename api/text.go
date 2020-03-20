@@ -1,8 +1,6 @@
 package api
 
 import (
-	"fmt"
-	"net/url"
 	"strings"
 
 	"github.com/gobuffalo/packr"
@@ -17,16 +15,6 @@ func init() {
 	box := packr.NewBox("../build/text")
 	if about, err := box.MustString("about"); err == nil {
 		Text.BlockbookAbout = strings.TrimSpace(about)
-	} else {
-		panic(err)
-	}
-	if tosLink, err := box.MustString("tos_link"); err == nil {
-		tosLink = strings.TrimSpace(tosLink)
-		if _, err := url.ParseRequestURI(tosLink); err == nil {
-			Text.TOSLink = tosLink
-		} else {
-			panic(fmt.Sprint("tos_link is not valid URL:", err.Error()))
-		}
 	} else {
 		panic(err)
 	}
