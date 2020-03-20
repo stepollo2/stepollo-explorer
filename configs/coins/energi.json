@@ -23,8 +23,6 @@
     "system_user": "energi",
     "version": "3.0.2",
     "binary_url": "https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/3.0.2/energi3-3.0.2-linux-amd64.tgz",
-    "verification_type": "gpg",
-    "verification_source": "https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/3.0.2/energi3-3.0.2-linux-amd64.tgz.sig",
     "extract_command": "tar -C backend --strip 1 -xf",
     "exclude_files": [],
     "exec_command_template": "/bin/sh -c '{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/energi3 --ipcdisable --syncmode full --cache 1024 --nat none --datadir {{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend --port 38336 --ws --wsaddr 0.0.0.0 --wsport {{.Ports.BackendRPC}} --wsorigins \"*\" --rpc --rpcport 8136 -rpcaddr 0.0.0.0 --rpccorsdomain \"*\" --rpcvhosts \"*\" 2>>{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/{{.Coin.Alias}}.log'",
