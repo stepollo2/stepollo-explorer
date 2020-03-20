@@ -24,9 +24,9 @@ type EnergiNet uint32
 
 const (
 	// MainNet is production network
-	MainNet EnergiNet = 1
+	MainNet EnergiNet = 39797
 	// TestNet is Ropsten test network
-	TestNet EnergiNet = 3
+	TestNet EnergiNet = 49797
 )
 
 // Configuration represents json config file
