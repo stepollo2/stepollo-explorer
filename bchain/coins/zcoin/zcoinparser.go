@@ -1,4 +1,4 @@
-package xzc
+package zcoin
 
 import (
 	"bytes"

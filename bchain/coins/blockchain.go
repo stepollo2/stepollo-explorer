@@ -13,9 +13,10 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
-	"github.com/grupokindynos/coins-explorer/bchain/coins/ngr"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
-	"github.com/grupokindynos/coins-explorer/bchain/coins/xzc"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/ravencoin"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/snowgem"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/zcoin"
 	"github.com/grupokindynos/coins-explorer/common"
 	"io/ioutil"
 	"math/big"
@@ -37,11 +38,12 @@ func init() {
 	BlockChainFactories["DigiByte"] = digibyte.NewDigiByteRPC
 	BlockChainFactories["Divi"] = divi.NewDiviRPC
 	BlockChainFactories["Ethereum"] = eth.NewEthereumRPC
-	BlockChainFactories["Energi"] = ngr.NewEnergiRPC
 	BlockChainFactories["Groestlcoin"] = grs.NewGroestlcoinRPC
 	BlockChainFactories["Litecoin"] = litecoin.NewLitecoinRPC
 	BlockChainFactories["Polis"] = polis.NewPolisRPC
-	BlockChainFactories["Zcoin"] = xzc.NewZcoinRPC
+	BlockChainFactories["Zcoin"] = zcoin.NewZcoinRPC
+	BlockChainFactories["Snowgem"] = snowgem.NewSnowGemRPC
+	BlockChainFactories["Ravencoin"] = ravencoin.NewRavencoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
