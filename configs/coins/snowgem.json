@@ -1,8 +1,8 @@
 {
   "coin": {
-    "name": "SnowGem",
+    "name": "Snowgem",
     "shortcut": "XSG",
-    "label": "SnowGem",
+    "label": "Snowgem",
     "alias": "snowgem"
   },
   "ports": {
@@ -20,7 +20,7 @@
   },
   "backend": {
     "package_name": "backend-snowgem",
-    "package_revision": "satoshilabs-1",
+    "package_revision": "polispay",
     "system_user": "snowgem",
     "version": "3.0.4-7",
     "binary_url": "https://github.com/Snowgem/Snowgem/releases/download/v3000457-20190909/snowgem-debian9.11.0-3000457-20190926.zip",

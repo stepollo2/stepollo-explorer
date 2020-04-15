@@ -38,7 +38,7 @@ func (z *FYDCoinRPC) Initialize() error {
 
 	params := GetChainParams(chainName)
 
-	z.Parser = NewAryacoinParser(params, z.ChainConfig)
+	z.Parser = NewFYDCoinParser(params, z.ChainConfig)
 
 	// parameters for getInfo request
 	z.Testnet = false
