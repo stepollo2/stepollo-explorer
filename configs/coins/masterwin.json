@@ -26,7 +26,7 @@
     "binary_url": "https://github.com/Master-Win/MasterWin/releases/download/v1.0/Masternode_18.04.tar.gz",
     "verification_type": "sha256",
     "verification_source": "baefef34fe5b1f83beab93b12af8316d38004ba4d4300c9a3cea31ffe8317e12",
-    "extract_command": "tar -C backend --strip 1 -xf",
+    "extract_command": "tar -C backend -xf",
     "exclude_files": [],
     "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/masterwind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
     "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
