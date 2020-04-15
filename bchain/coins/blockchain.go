@@ -5,15 +5,19 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/aryacoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/dash"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/deeponion"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/digibyte"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/divi"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/eth"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/fydcoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/masterwin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/rapids"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/ravencoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/snowgem"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/zcoin"
@@ -44,6 +48,10 @@ func init() {
 	BlockChainFactories["Zcoin"] = zcoin.NewZcoinRPC
 	BlockChainFactories["Snowgem"] = snowgem.NewSnowGemRPC
 	BlockChainFactories["Ravencoin"] = ravencoin.NewRavencoinRPC
+	BlockChainFactories["Aryacoin"] = aryacoin.NewAryacoinRPC
+	BlockChainFactories["Rapids"] = rapids.NewRapidsRPC
+	BlockChainFactories["Masterwin"] = masterwin.NewMasterwinRPC
+	BlockChainFactories["FYDCoin"] = fydcoin.NewFYDCoinRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file

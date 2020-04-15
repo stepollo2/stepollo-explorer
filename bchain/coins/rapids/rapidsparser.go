@@ -1,4 +1,4 @@
-package snowgem
+package rapids
 
 import (
 	"github.com/grupokindynos/coins-explorer/bchain"
@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	MainnetMagic wire.BitcoinNet = 0x6427c824
+	MainnetMagic wire.BitcoinNet = 0xcbf5a261
 )
 
 var (
@@ -20,28 +20,25 @@ func init() {
 	MainNetParams.Net = MainnetMagic
 
 	// Address encoding magics
-	MainNetParams.AddressMagicLen = 2
-	MainNetParams.PubKeyHashAddrID = []byte{0x1C, 0x28} // base58 prefix: s1
-	MainNetParams.ScriptHashAddrID = []byte{0x1C, 0x2D} // base58 prefix: s3
+	MainNetParams.AddressMagicLen = 1
+	MainNetParams.PubKeyHashAddrID = []byte{61}
+	MainNetParams.ScriptHashAddrID = []byte{6}
 }
 
-// SnowGemParser handle
-type SnowGemParser struct {
+// RapidsParser handle
+type RapidsParser struct {
 	*btc.BitcoinParser
 	baseparser *bchain.BaseParser
 }
 
-// NewSnowGemParser returns new SnowGemParser instance
-func NewSnowGemParser(params *chaincfg.Params, c *btc.Configuration) *SnowGemParser {
-	return &SnowGemParser{
+// NewRapidsParser returns new RapidsParser instance
+func NewRapidsParser(params *chaincfg.Params, c *btc.Configuration) *RapidsParser {
+	return &RapidsParser{
 		BitcoinParser: btc.NewBitcoinParser(params, c),
 		baseparser:    &bchain.BaseParser{},
 	}
 }
 
-// GetChainParams contains network parameters for the main SnowGem network,
-// the regression test SnowGem network, the test SnowGem network and
-// the simulation test SnowGem network, in this order
 func GetChainParams(chain string) *chaincfg.Params {
 	if !chaincfg.IsRegistered(&MainNetParams) {
 		err := chaincfg.Register(&MainNetParams)
@@ -53,11 +50,11 @@ func GetChainParams(chain string) *chaincfg.Params {
 }
 
 // PackTx packs transaction to byte array using protobuf
-func (p *SnowGemParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
+func (p *RapidsParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
 	return p.baseparser.PackTx(tx, height, blockTime)
 }
 
 // UnpackTx unpacks transaction from protobuf byte array
-func (p *SnowGemParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
+func (p *RapidsParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
 	return p.baseparser.UnpackTx(buf)
 }

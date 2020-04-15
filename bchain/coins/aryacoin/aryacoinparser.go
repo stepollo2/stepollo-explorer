@@ -1,4 +1,4 @@
-package snowgem
+package aryacoin
 
 import (
 	"github.com/grupokindynos/coins-explorer/bchain"
@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	MainnetMagic wire.BitcoinNet = 0x6427c824
+	MainnetMagic wire.BitcoinNet = 0xe7eae188
 )
 
 var (
@@ -20,20 +20,20 @@ func init() {
 	MainNetParams.Net = MainnetMagic
 
 	// Address encoding magics
-	MainNetParams.AddressMagicLen = 2
-	MainNetParams.PubKeyHashAddrID = []byte{0x1C, 0x28} // base58 prefix: s1
-	MainNetParams.ScriptHashAddrID = []byte{0x1C, 0x2D} // base58 prefix: s3
+	MainNetParams.AddressMagicLen = 1
+	MainNetParams.PubKeyHashAddrID = []byte{23}
+	MainNetParams.ScriptHashAddrID = []byte{50}
 }
 
-// SnowGemParser handle
-type SnowGemParser struct {
+// AryacoinParser handle
+type AryacoinParser struct {
 	*btc.BitcoinParser
 	baseparser *bchain.BaseParser
 }
 
-// NewSnowGemParser returns new SnowGemParser instance
-func NewSnowGemParser(params *chaincfg.Params, c *btc.Configuration) *SnowGemParser {
-	return &SnowGemParser{
+// NewAryacoinParser returns new AryacoinParser instance
+func NewAryacoinParser(params *chaincfg.Params, c *btc.Configuration) *AryacoinParser {
+	return &AryacoinParser{
 		BitcoinParser: btc.NewBitcoinParser(params, c),
 		baseparser:    &bchain.BaseParser{},
 	}
@@ -53,11 +53,11 @@ func GetChainParams(chain string) *chaincfg.Params {
 }
 
 // PackTx packs transaction to byte array using protobuf
-func (p *SnowGemParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
+func (p *AryacoinParser) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte, error) {
 	return p.baseparser.PackTx(tx, height, blockTime)
 }
 
 // UnpackTx unpacks transaction from protobuf byte array
-func (p *SnowGemParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
+func (p *AryacoinParser) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
 	return p.baseparser.UnpackTx(buf)
 }
