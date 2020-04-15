@@ -41,7 +41,7 @@ func (b *ColossusRPC) Initialize() error {
 	params := GetChainParams(chainName)
 
 	// always create parser
-	b.Parser = NewColxParser(params, b.ChainConfig)
+	b.Parser = NewColossusParser(params, b.ChainConfig)
 
 	// parameters for getInfo request
 	b.Testnet = false
