@@ -1,8 +1,8 @@
 {
   "coin": {
-    "name": "ColossusXT",
+    "name": "Colossus",
     "shortcut": "COLX",
-    "label": "ColossusXT",
+    "label": "Colossus",
     "alias": "colossus"
   },
   "ports": {
