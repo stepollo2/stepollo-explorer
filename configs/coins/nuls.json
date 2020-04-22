@@ -1,0 +1,67 @@
+{
+    "coin": {
+      "name": "NULS",
+      "shortcut": "NULS",
+      "label": "NULS",
+      "alias": "nuls"
+    },
+    "ports": {
+      "backend_rpc": 8030,
+      "backend_message_queue": 38330,
+      "blockbook_internal": 9030,
+      "blockbook_public": 9130
+    },
+    "ipc": {
+      "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",
+      "rpc_user": "rpc",
+      "rpc_pass": "rpc",
+      "rpc_timeout": 25,
+      "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
+    },
+    "backend": {
+      "package_name": "backend-nuls",
+      "package_revision": "polispay",
+      "system_user": "nuls",
+      "version": "2.5.0",
+      "binary_url": "http://nuls-usa-west.oss-us-west-1.aliyuncs.com/linux/NULS_Wallet_linux64_2.5.0.tar.gz",
+      "verification_type": "sha256",
+      "verification_source": "d5941bd7c3c9e7938b7a30b31ec8e71164dc9bc6586039423e46ba2fccf1c09c",
+      "extract_command": "tar -C backend --strip 0 -xf",
+      "exclude_files": [],
+      "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/start --port {{.Ports.BackendRPC}} --dataDir {{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend --pid-file /run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
+      "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
+      "postinst_script_template": "",
+      "service_type": "forking",
+      "service_additional_params_template": "",
+      "protect_memory": false,
+      "mainnet": true,
+      "server_config_file": "bitcoin_like.conf",
+      "client_config_file": "bitcoin_like_client.conf",
+      "additional_params": {
+        "addnode": [
+          "mainnet.nuls"
+        ]
+      }
+    },
+    "blockbook": {
+      "package_name": "blockbook-nuls",
+      "system_user": "blockbook-nuls",
+      "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
+      "public_binding_template": ":{{.Ports.BlockbookPublic}}",
+      "explorer_url": "",
+      "additional_params": "-resyncindexperiod=11000",
+      "block_chain": {
+        "parse": true,
+        "mempool_workers": 4,
+        "mempool_sub_workers": 8,
+        "block_addresses_to_keep": 300,
+        "xpub_magic": 76067358,
+        "slip44": 8964,
+        "additional_params": {}
+      }
+    },
+    "meta": {
+      "package_maintainer": "NULS Core Team",
+      "package_maintainer_email": "ln@nuls.io"
+    }
+  }

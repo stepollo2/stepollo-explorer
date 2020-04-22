@@ -4,6 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"math/big"
+	"reflect"
+	"time"
+
 	"github.com/grupokindynos/coins-explorer/bchain"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/aryacoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
@@ -17,16 +22,13 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/grs"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/litecoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/masterwin"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/nuls"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/polis"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/rapids"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/ravencoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/snowgem"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/zcoin"
 	"github.com/grupokindynos/coins-explorer/common"
-	"io/ioutil"
-	"math/big"
-	"reflect"
-	"time"
 
 	"github.com/juju/errors"
 )
@@ -54,6 +56,8 @@ func init() {
 	BlockChainFactories["Masterwin"] = masterwin.NewMasterwinRPC
 	BlockChainFactories["FYDCoin"] = fydcoin.NewFYDCoinRPC
 	BlockChainFactories["Colossus"] = colossus.NewColossusRPC
+	BlockChainFactories["Nuls"] = nuls.NewNulsRPC
+
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
