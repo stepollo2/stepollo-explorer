@@ -4,10 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/grupokindynos/coins-explorer/api"
-	"github.com/grupokindynos/coins-explorer/bchain"
-	"github.com/grupokindynos/coins-explorer/common"
-	"github.com/grupokindynos/coins-explorer/db"
 	"html/template"
 	"io/ioutil"
 	"math/big"
@@ -20,6 +16,11 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/grupokindynos/coins-explorer/api"
+	"github.com/grupokindynos/coins-explorer/bchain"
+	"github.com/grupokindynos/coins-explorer/common"
+	"github.com/grupokindynos/coins-explorer/db"
 
 	"github.com/golang/glog"
 )
@@ -1226,6 +1227,12 @@ func (s *PublicServer) apiEstimateFee(r *http.Request, apiVersion int) (interfac
 				if err != nil {
 					return nil, err
 				}
+			}
+			chainInfo := s.chain.GetCoinName()
+			if strings.ToLower(chainInfo) == "aryacoin" {
+				fee.SetInt64(5000000)
+				res.Result = s.chainParser.AmountToDecimalString(&fee)
+				return res, nil
 			}
 			res.Result = s.chainParser.AmountToDecimalString(&fee)
 			return res, nil
