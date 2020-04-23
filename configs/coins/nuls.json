@@ -27,7 +27,11 @@
       "verification_type": "sha256",
       "verification_source": "d5941bd7c3c9e7938b7a30b31ec8e71164dc9bc6586039423e46ba2fccf1c09c",
       "extract_command": "tar -C backend --strip 0 -xf",
-      "exclude_files": [],
+      "exclude_files": [
+          "Library/",
+          "Logs/",
+          "Modules/"
+      ],
       "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/start --port {{.Ports.BackendRPC}} --dataDir {{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend --pid-file /run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
       "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
       "postinst_script_template": "",
