@@ -28,10 +28,10 @@
     "verification_source": "07ef11bb51bd6b57b549abffa9af3b3138a260cb29b9eaa253bead3545dfdf32",
     "extract_command": "unzip -j -d backend",
     "exclude_files": [
-      "bin/test_crown-qt",
-      "bin/test_crown",
-      "bin/crown-tx",
-      "bin/crown-qt"
+      "test_crown-qt",
+      "test_crown",
+      "crown-tx",
+      "crown-qt"
     ],
     "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/crownd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
     "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
