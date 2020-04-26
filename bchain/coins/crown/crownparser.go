@@ -31,7 +31,7 @@ type CrownParser struct {
 }
 
 // NewCrownParser returns new CrownParser instance
-func NewCrownParser(params *chaincfg.Params, c *btc.Configuration) *DashParser {
+func NewCrownParser(params *chaincfg.Params, c *btc.Configuration) *CrownParser {
 	return &CrownParser{
 		BitcoinParser: btc.NewBitcoinParser(params, c),
 		baseparser:    &bchain.BaseParser{},

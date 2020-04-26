@@ -44,13 +44,8 @@ func (b *CrownRPC) Initialize() error {
 	b.Parser = NewCrownParser(params, b.ChainConfig)
 
 	// parameters for getInfo request
-	if params.Net == MainnetMagic {
-		b.Testnet = false
-		b.Network = "livenet"
-	} else {
-		b.Testnet = true
-		b.Network = "testnet"
-	}
+	b.Testnet = false
+	b.Network = "livenet"
 
 	glog.Info("rpc: block chain ", params.Name)
 

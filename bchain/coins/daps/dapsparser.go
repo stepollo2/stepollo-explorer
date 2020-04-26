@@ -31,7 +31,7 @@ type DapsParser struct {
 }
 
 // NewDapsParser returns new DapsParser instance
-func NewDapsParser(params *chaincfg.Params, c *btc.Configuration) *DashParser {
+func NewDapsParser(params *chaincfg.Params, c *btc.Configuration) *DapsParser {
 	return &DapsParser{
 		BitcoinParser: btc.NewBitcoinParser(params, c),
 		baseparser:    &bchain.BaseParser{},
