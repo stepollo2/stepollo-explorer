@@ -28,7 +28,8 @@
     "verification_source": "07ef11bb51bd6b57b549abffa9af3b3138a260cb29b9eaa253bead3545dfdf32",
     "extract_command": "unzip -j -d backend",
     "exclude_files": [
-      "bin/text_crown",
+      "bin/test_crown-qt",
+      "bin/test_crown",
       "bin/crown-tx",
       "bin/crown-qt"
     ],
