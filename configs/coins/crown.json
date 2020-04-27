@@ -23,17 +23,15 @@
     "package_revision": "polispay",
     "system_user": "crown",
     "version": "0.14.0.1",
-    "binary_url": "https://github.com/Crowndev/crown-core/releases/download/v0.14.0.1-Emerald/Crown-0.14.0.1-Linux64.zip",
+    "binary_url": "https://public.oly.tech/others/crown-0.14.0.1-linux.tar.gz",
     "verification_type": "sha256",
-    "verification_source": "07ef11bb51bd6b57b549abffa9af3b3138a260cb29b9eaa253bead3545dfdf32",
-    "extract_command": "unzip -j -d backend",
+    "verification_source": "33eda72dabdc20be1d09883a98e1754eb71ce1c6cf0a053ccb2c65ebcab94897",
+    "extract_command": "tar -C backend --strip 1 -xf",
     "exclude_files": [
-      "test_crown-qt",
-      "test_crown",
-      "crown-tx",
-      "crown-qt"
+      "bin/test_crown",
+      "bin/crown-tx"
     ],
-    "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/crownd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
+    "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/crownd -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
     "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
     "postinst_script_template": "",
     "service_type": "forking",
