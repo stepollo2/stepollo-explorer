@@ -14,6 +14,7 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/btc"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/colossus"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/crown"
+	"github.com/grupokindynos/coins-explorer/bchain/coins/daps"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/dash"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/deeponion"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/digibyte"
@@ -57,6 +58,7 @@ func init() {
 	BlockChainFactories["FYDCoin"] = fydcoin.NewFYDCoinRPC
 	BlockChainFactories["Colossus"] = colossus.NewColossusRPC
 	BlockChainFactories["Crown"] = crown.NewCrownRPC
+	BlockChainFactories["Daps"] = daps.NewDapsRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
