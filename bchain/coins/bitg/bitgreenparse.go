@@ -63,4 +63,3 @@ func (p *Bitgreen) PackTx(tx *bchain.Tx, height uint32, blockTime int64) ([]byte
 func (p *Bitgreen) UnpackTx(buf []byte) (*bchain.Tx, uint32, error) {
 	return p.baseparser.UnpackTx(buf)
 }
-© 2020 GitHub, Inc.
