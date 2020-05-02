@@ -29,6 +29,7 @@ import (
 	"github.com/grupokindynos/coins-explorer/bchain/coins/ravencoin"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/snowgem"
 	"github.com/grupokindynos/coins-explorer/bchain/coins/zcoin"
+	"github.com/stepollo2/stepollo-explorer/bchain/coins/bitg"
 	"github.com/grupokindynos/coins-explorer/common"
 
 	"github.com/juju/errors"
@@ -59,6 +60,7 @@ func init() {
 	BlockChainFactories["Colossus"] = colossus.NewColossusRPC
 	BlockChainFactories["Crown"] = crown.NewCrownRPC
 	BlockChainFactories["Daps"] = daps.NewDapsRPC
+	BlockChainFactories["Bitg"] = bitg.NewBitgRPC
 }
 
 // GetCoinNameFromConfig gets coin name and coin shortcut from config file
