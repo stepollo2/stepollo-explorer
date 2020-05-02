@@ -2,8 +2,8 @@ package bitg
 
 import (
 	"encoding/json"
-	"github.com/stepollo2/stepollo-explorerbchain"
-	"github.com/stepollo2/stepollo-explorerbchain/coins/btc"
+	"github.com/stepollo2/stepollo-explorer/bchain"
+	"github.com/stepollo2/stepollo-explorer/bchain/coins/btc"
 
 	"github.com/golang/glog"
 )
