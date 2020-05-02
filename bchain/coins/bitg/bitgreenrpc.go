@@ -41,13 +41,8 @@ func (b *BitgreenRPC) Initialize() error {
 	b.Parser = NewBitgreenParser(params, b.ChainConfig)
 
 	// parameters for getInfo request
-	if params.Net == MainnetMagic {
-		b.Testnet = false
-		b.Network = "livenet"
-	} else {
-		b.Testnet = true
-		b.Network = "testnet"
-	}
+	b.Testnet = false
+        b.Network = "livenet"
 
 	glog.Info("rpc: block chain ", params.Name)
 	return nil
