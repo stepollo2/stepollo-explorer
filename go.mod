@@ -1,4 +1,4 @@
-module github.com/grupokindynos/coins-explorer
+module github.com/stepollo2/stepollo-explorer
 
 go 1.13
 
