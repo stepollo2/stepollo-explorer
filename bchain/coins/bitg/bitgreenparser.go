@@ -1,8 +1,8 @@
 package bitg
 
 import (
-	"github.com/eabz/blockbook/bchain"
-	"github.com/eabz/blockbook/bchain/coins/btc"
+	"github.com/stepollo2/stepollo-explorer/bchain"
+	"github.com/stepollo2/stepollo-explorer/bchain/coins/btc"
 	"github.com/martinboehm/btcd/wire"
 	"github.com/martinboehm/btcutil/chaincfg"
 )
